@@ -12,9 +12,7 @@
         httpReq.onreadystatechange = function() {
           if (httpReq.readyState == 4 && httpReq.status == 200) {
             var str = JSON.parse(httpReq.responseText);
-            document.getElementById("ShowtextC").innerHTML = ("Cases : " + str["cases"]);
-			document.getElementById("ShowtextD").innerHTML = ("Deaths : " + str["deaths"]);
-			document.getElementById("ShowtextR").innerHTML = ("Recovered : " + str["recovered"]);
+            alert("Cases : " + str["cases"] + "\nDeaths : " + str["deaths"] + "\nRecovered : "+str["recovered"]);
           }
         };
       }
@@ -28,9 +26,7 @@
         httpReq.onreadystatechange = function() {
           if (httpReq.readyState == 4 && httpReq.status == 200) {
             var str = JSON.parse(httpReq.responseText);
-            document.getElementById("ShowtextC").innerHTML = ("Cases : " + str["cases"]);
-			document.getElementById("ShowtextD").innerHTML = ("Deaths : " + str["deaths"]);
-			document.getElementById("ShowtextR").innerHTML = ("Recovered : " + str["recovered"]);
+            alert("Cases : " + str["cases"] + "\nDeaths : " + str["deaths"] + "\nRecovered : "+str["recovered"]);
           }
         };
       }
@@ -44,9 +40,7 @@
         httpReq.onreadystatechange = function() {
           if (httpReq.readyState == 4 && httpReq.status == 200) {
             var str = JSON.parse(httpReq.responseText);
-            document.getElementById("ShowtextC").innerHTML = ("Cases : " + str["cases"]);
-			document.getElementById("ShowtextD").innerHTML = ("Deaths : " + str["deaths"]);
-			document.getElementById("ShowtextR").innerHTML = ("Recovered : " + str["recovered"]);
+            alert("Cases : " + str["cases"] + "\nDeaths : " + str["deaths"] + "\nRecovered : "+str["recovered"]);
           }
         };
       }
@@ -79,17 +73,8 @@
         <div id="showbox"></div>
       </body>
       <button onclick="chinaAPI()">China Situation</button>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextC">Cases : </h3>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextD">Deaths : </h3>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextR">Recovered : </h3>
       <button onclick="taiwanAPI()">Taiwan Situation</button>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextC">Cases : </h3>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextD">Deaths : </h3>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextR">Recovered : </h3>	 
       <button onclick="japanAPI()">Japan Situation</button>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextC">Cases : </h3>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextD">Deaths : </h3>
-	  <h3 style="font-size: 13px; color:white;"id="ShowtextR">Recovered : </h3>	 
     </div>
   </body>
   <footer style="font-size: 13px; position: absolute; bottom: 10px; right: 10px;">

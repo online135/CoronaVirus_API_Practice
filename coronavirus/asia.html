@@ -12,7 +12,9 @@
         httpReq.onreadystatechange = function() {
           if (httpReq.readyState == 4 && httpReq.status == 200) {
             var str = JSON.parse(httpReq.responseText);
-            alert("Cases : " + str["cases"] + "\nDeaths : " + str["deaths"] + "\nRecovered : "+str["recovered"]);
+            document.getElementById("ShowtextC1").innerHTML = ("Cases : " + str["cases"]);
+			document.getElementById("ShowtextD1").innerHTML = ("Deaths : " + str["deaths"]);
+			document.getElementById("ShowtextR1").innerHTML = ("Recovered : " + str["recovered"]);
           }
         };
       }
@@ -26,7 +28,9 @@
         httpReq.onreadystatechange = function() {
           if (httpReq.readyState == 4 && httpReq.status == 200) {
             var str = JSON.parse(httpReq.responseText);
-            alert("Cases : " + str["cases"] + "\nDeaths : " + str["deaths"] + "\nRecovered : "+str["recovered"]);
+            document.getElementById("ShowtextC2").innerHTML = ("Cases : " + str["cases"]);
+			document.getElementById("ShowtextD2").innerHTML = ("Deaths : " + str["deaths"]);
+			document.getElementById("ShowtextR2").innerHTML = ("Recovered : " + str["recovered"]);
           }
         };
       }
@@ -40,7 +44,9 @@
         httpReq.onreadystatechange = function() {
           if (httpReq.readyState == 4 && httpReq.status == 200) {
             var str = JSON.parse(httpReq.responseText);
-            alert("Cases : " + str["cases"] + "\nDeaths : " + str["deaths"] + "\nRecovered : "+str["recovered"]);
+            document.getElementById("ShowtextC3").innerHTML = ("Cases : " + str["cases"]);
+			document.getElementById("ShowtextD3").innerHTML = ("Deaths : " + str["deaths"]);
+			document.getElementById("ShowtextR3").innerHTML = ("Recovered : " + str["recovered"]);
           }
         };
       }
@@ -74,19 +80,19 @@
       </body>
 	<div class="row">
 		<div class="column">
-			<button onclick="ukAPI()">UK Situation</button>
+			<button onclick="chinaAPI()">China Situation</button>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextC1">Cases :</h3>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextD1">Deaths :</h3>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextR1">Recovered :</h3>
 		</div>
 		<div class="column">
-			<button onclick="franceAPI()">France Situation</button>
+			<button onclick="taiwanAPI()">Taiwan Situation</button>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextC2">Cases :</h3>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextD2">Deaths :</h3>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextR2">Recovered :</h3>
 		</div>
 		<div class="column">
-			<button onclick="italyAPI()">Italy Situation</button>
+			<button onclick="japanAPI()">Japan Situation</button>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextC3">Cases :</h3>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextD3">Deaths :</h3>
 			<h3 style="font-size: 13px; color:white;"id="ShowtextR3">Recovered :</h3>
